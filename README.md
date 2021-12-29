@@ -1,2 +1,4 @@
 # svelte-meets-pug
-Useful pug components as svelte modules.
+
+Pug components that can be used in svelte-based projects.
+

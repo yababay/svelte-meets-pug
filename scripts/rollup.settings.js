@@ -1,7 +1,7 @@
 import json from '@rollup/plugin-json'
 
 export default {
-    input: 'src/pug_modules/settings.js',
+    input: './settings.js',
     output: {
         dir: 'scripts',
         format: 'cjs',

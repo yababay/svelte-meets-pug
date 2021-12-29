@@ -1,7 +1,7 @@
 import pug  from 'rollup-plugin-pug'
 
 export default {
-    input: 'src/pug_modules/html.js',
+    input: './templates/html.js',
     output: {
         dir: 'scripts',
         format: 'cjs',

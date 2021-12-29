@@ -1,4 +1,4 @@
-import templateFn from './index.pug'
+import templateFn from '../../index.pug'
 
 export default settings => templateFn(settings)
 
