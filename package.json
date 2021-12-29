@@ -1,0 +1,30 @@
+{
+  "name": "@yababay67/svelte-meets-pug",
+  "version": "0.1.1",
+  "description": "Reusable pug components for svelte modules.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yababay/svelte-meets-pug.git"
+  },
+  "keywords": [
+    "svelte",
+    "pug"
+  ],
+  "author": "Michael Belyakov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yababay/svelte-meets-pug/issues"
+  },
+  "dependencies": {
+    "@yababay67/svelte-meets-bootstrap-icons": "^0.0.7",
+    "recursive-copy": "^2.0.13"
+  },
+  "devDependencies": {
+    "rollup-plugin-pug": "^1.1.1"
+  },
+  "homepage": "https://github.com/yababay/svelte-meets-pug#readme"
+}
