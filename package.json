@@ -1,17 +1,10 @@
 {
   "name": "@yababay67/svelte-meets-pug",
-  "version": "0.1.4",
+  "version": "0.2.4",
   "description": "Reusable pug components for svelte modules.",
-  "main": "index.js",
   "scripts": {
-    "copy"        : "node -r '@yababay67/svelte-meets-pug' -e 'const copy = require(\"@yababay67/svelte-meets-pug\"); copy()'",
-    "html"        : "rollup --config ./src/pug_modules/scripts/rollup.html.js",
-    "settings"    : "rollup --config ./src/pug_modules/scripts/rollup.settings.js",
-    "index"       : "node ./src/pug_modules/scripts/index.js",
-    "postinstall" : "npm copy && npm html && npm settings && npm index",
-
-    "clean" : "rm -rf docs/index.html src/pug_modules scripts/html.js scripts/settings.js",
-    "test"  : "echo \"Error: no test specified\" && exit 1"
+    "clean"       : "rm -rf docs/index.html src/pug_modules scripts/html.js scripts/settings.js",
+    "test"        : "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -30,11 +23,11 @@
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
-    "recursive-copy": "^2.0.13",
+    "@rollup/plugin-run": "^2.1.0",
     "rollup-plugin-pug": "^1.1.1"
   },
   "homepage": "https://github.com/yababay/svelte-meets-pug#readme",
   "dependencies": {
-    "@yababay67/svelte-meets-pug": "^0.1.3"
+    "recursive-copy": "^2.0.13"
   }
 }

@@ -1,9 +1,9 @@
 import json from '@rollup/plugin-json'
 
 export default {
-    input: './settings.js',
+    input: './src/pug_modules/scripts/templates/settings.js',
     output: {
-        dir: 'scripts',
+        dir: '.tmp',
         format: 'cjs',
         exports: 'default'
     },
