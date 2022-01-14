@@ -3,7 +3,7 @@ a.link-secondary(
     type="button" 
     data-bs-toggle="offcanvas" 
     data-bs-target="#toc-offcanvas" 
-    aria-controls="toc-offcanvas") Показать список материалов
+    aria-controls="toc-offcanvas")= ( tocToggle || "Показать список материалов")
 
 aside.offcanvas.offcanvas-start(
     data-bs-scroll="true" 
@@ -13,7 +13,7 @@ aside.offcanvas.offcanvas-start(
     aria-labelledby="toc-offcanvas-label")
 
     .offcanvas-header
-        h5.offcanvas-title(id="toc-offcanvas-label") Список материалов:
+        h5.offcanvas-title(id="toc-offcanvas-label")= (tocHeader || "Список материалов:")
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     .offcanvas-body
         each section in asideLinks
