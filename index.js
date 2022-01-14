@@ -1,11 +1,12 @@
 var copy = require('recursive-copy')
 
-var from = 'node_modules/@yababay67/svelte-meets-pug'
-var to = 'src/pug_modules'
+var fromPug = 'node_modules/@yababay67/svelte-meets-pug'
+var toPug = 'src/pug_modules'
 
 var options = {
     filter: [
         '**/*',
+        '!css',
         '!index.js',
         '!LICENSE',
         '!package.json',
@@ -13,7 +14,11 @@ var options = {
     ]
 }
 
-module.exports = () => copy(from, to, options, (err, result)=>{
+module.exports.copySrc = () => copy(fromPug, toPug, options, (err, result)=>{
     console.log(`Pug templates are ${err ? "not copied!" + err : "copied successfully."}`)
+})
+
+module.exports.copyCss = () => copy(fromPug + '/css', 'docs/pug-modules', (err, result)=>{
+    console.log(`CSS templates are ${err ? "not copied!" + err : "copied successfully."}`)
 })
 

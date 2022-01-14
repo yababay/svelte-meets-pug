@@ -10,15 +10,15 @@ html(lang="ru")
             link(rel='stylesheet' href='vendors/css/bootstrap.min.css')
             script(defer src='vendors/js/bootstrap.bundle.min.js')
 
-        if withHeaderMainFooter
+        if withHMFLayout
             link(rel='stylesheet' href='pug-modules/header-main-footer.css')
 
         if mainLayout
             link(rel='stylesheet' href='pug-modules/' + mainLayout + '.css')
 
         if withSvelte
-            link(rel='stylesheet' href='svelte/bundle.css')
-            script(defer src='svelte/bundle.js')
+            link(rel='stylesheet' href='build/bundle.css')
+            script(defer src='build/bundle.js')
 
         if !logo 
             link(rel='icon' type='image/svg+xml' href='media/logo.svg')
@@ -36,10 +36,10 @@ html(lang="ru")
                 include headers/brand-and-end-icons
         main
             if mainLayout == 'aside-and-article'
-                include asides/aside-and-article
+                include main/aside-and-article
 
             if mainLayout == 'offcanvas-and-article'
-                include asides/offcanvas-and-article
+                include main/offcanvas-and-article
 
         footer
             if footerLayout == 'simple-copyright'
