@@ -1,6 +1,6 @@
 {
   "name": "@yababay67/svelte-meets-pug",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Reusable pug components for svelte modules.",
   "scripts": {
     "clean"       : "rm -rf docs/index.html src/pug_modules scripts/html.js scripts/settings.js",
