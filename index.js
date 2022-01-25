@@ -7,6 +7,7 @@ var options = {
     filter: [
         '**/*',
         '!css',
+        '!js',
         '!index.js',
         '!LICENSE',
         '!package.json',
@@ -20,5 +21,9 @@ module.exports.copySrc = () => copy(fromPug, toPug, options, (err, result)=>{
 
 module.exports.copyCss = () => copy(fromPug + '/css', 'docs/pug-modules', (err, result)=>{
     console.log(`CSS templates are ${err ? "not copied!" + err : "copied successfully."}`)
+})
+
+module.exports.copyJs = () => copy(fromPug + '/js', 'docs/pug-modules', (err, result)=>{
+    console.log(`JavaScript templates are ${err ? "not copied!" + err : "copied successfully."}`)
 })
 

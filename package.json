@@ -1,10 +1,9 @@
 {
   "name": "@yababay67/svelte-meets-pug",
-  "version": "0.3.1",
+  "version": "0.4.3",
   "description": "Reusable pug components for svelte modules.",
   "scripts": {
-    "clean"       : "rm -rf docs/index.html src/pug_modules scripts/html.js scripts/settings.js",
-    "test"        : "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,12 +21,15 @@
     "url": "https://github.com/yababay/svelte-meets-pug/issues"
   },
   "devDependencies": {
+    "rollup": "^2.66.1",
+    "rollup-plugin-pug": "^1.1.1",
     "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-run": "^2.1.0",
-    "rollup-plugin-pug": "^1.1.1"
+    "recursive-copy": "^2.0.13"
   },
   "homepage": "https://github.com/yababay/svelte-meets-pug#readme",
   "dependencies": {
-    "recursive-copy": "^2.0.13"
+    "bootstrap-icons": "^1.7.2"
   }
 }

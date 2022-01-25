@@ -8,27 +8,27 @@ html(lang="ru")
 
         if withBootstrap
             link(rel='stylesheet' href='vendors/css/bootstrap.min.css')
-            script(defer src='vendors/js/bootstrap.bundle.min.js')
-            script(defer src='vendors/js/popper.min.js')
+            script(defer src='pug-modules/js/bootstrap.bundle.min.js')
+            script(defer src='pug-modules/js/popper.min.js')
 
         if withCoderdocs
-            link(rel="stylesheet" href="vendors/css/monokai.css")
-            link(rel='stylesheet' href='pug-modules/coderdocs.css')
-            script(defer src='vendors/js/bootstrap.bundle.min.js')
-            script(defer src='vendors/js/popper.min.js')
-            script(defer src="vendors/js/coderdocs.js")
+            link(rel="stylesheet" href="pug-modules/css/monokai.css")
+            link(rel='stylesheet' href='pug-modules/css/coderdocs.css')
+            script(defer src='pug-modules/js/bootstrap.bundle.min.js')
+            script(defer src='pug-modules/js/popper.min.js')
+            script(defer src="pug-modules/js/coderdocs.js")
         if withSmoothscroll
-            script(defer src="vendors/js/smoothscroll.min.js")
+            script(defer src="pug-modules/js/smoothscroll.min.js")
         if withLightbox
-            script(defer src="vendors/js/simple-lightbox.min.js")
+            script(defer src="pug-modules/js/simple-lightbox.min.js")
         if withGumshoe
-            script(defer src="vendors/js/gumshoe.polyfills.min.js")
+            script(defer src="pug-modules/js/gumshoe.polyfills.min.js")
 
         if withHMFLayout
-            link(rel='stylesheet' href='pug-modules/header-main-footer.css')
+            link(rel='stylesheet' href='pug-modules/css/header-main-footer.css')
 
         if mainLayout
-            link(rel='stylesheet' href='pug-modules/' + mainLayout + '.css')
+            link(rel='stylesheet' href='pug-modules/css/' + mainLayout + '.css')
 
         if withSvelte
             link(rel='stylesheet' href='build/bundle.css')
@@ -45,6 +45,7 @@ html(lang="ru")
         title= title
 
     body
+        include sprites/svg
         header(class=(headerIsFixed && "fixed-top" || ""))
             if headerLayout == 'brand-and-end-icons'
                 include headers/brand-and-end-icons
