@@ -1,3 +1,5 @@
+import pug  from 'rollup-plugin-pug'
+import json from '@rollup/plugin-json';
 import run  from '@rollup/plugin-run'
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 
@@ -8,6 +10,6 @@ export default {
         format: 'cjs',
         exports: 'default'
     },
-    plugins: [run(), nodeResolve()]
+    plugins: [run(), nodeResolve(), json(), pug({pretty: true})]
 }
 

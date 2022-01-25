@@ -7,7 +7,7 @@ html(lang="ru")
         meta(name='viewport' content='width=device-width,initial-scale=1')
 
         if withBootstrap
-            link(rel='stylesheet' href='vendors/css/bootstrap.min.css')
+            link(rel='stylesheet' href='pug-modules/css/bootstrap.min.css')
             script(defer src='pug-modules/js/bootstrap.bundle.min.js')
             script(defer src='pug-modules/js/popper.min.js')
 
@@ -17,12 +17,8 @@ html(lang="ru")
             script(defer src='pug-modules/js/bootstrap.bundle.min.js')
             script(defer src='pug-modules/js/popper.min.js')
             script(defer src="pug-modules/js/coderdocs.js")
-        if withSmoothscroll
-            script(defer src="pug-modules/js/smoothscroll.min.js")
         if withLightbox
             script(defer src="pug-modules/js/simple-lightbox.min.js")
-        if withGumshoe
-            script(defer src="pug-modules/js/gumshoe.polyfills.min.js")
 
         if withHMFLayout
             link(rel='stylesheet' href='pug-modules/css/header-main-footer.css')
@@ -39,8 +35,8 @@ html(lang="ru")
         else
             link(rel='icon' type='image/png' href=logo)
 
-        if withIndexCss
-            link(rel='stylesheet' href='css/index.css')
+        if withCustomCss
+            link(rel='stylesheet' href='custom/index.css')
 
         title= title
 
